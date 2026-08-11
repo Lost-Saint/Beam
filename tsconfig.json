@@ -5,17 +5,22 @@
     "outDir": "dist",
     "declaration": true,
 
-    // allow for node type stripping
+    // node type-stripping compatible: the same source files that tsc builds
+    // can also be run directly with `node src/index.ts`
     "verbatimModuleSyntax": true,
     "erasableSyntaxOnly": true,
-    "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
 
-    // from https://github.com/tsconfig/bases/blob/main/bases/vite-react.json
+    // libraries should compile with nodenext so emitted import specifiers
+    // are valid in Node AND bundlers (bundler resolution is "infectious")
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+
+    // fast, isolated .d.ts emission - the modern default for libraries
+    "isolatedDeclarations": true,
+
     "target": "ES2023",
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "moduleResolution": "bundler"
+    "lib": ["ES2023", "DOM", "DOM.Iterable"]
   },
   "include": [
     "src/**/*.ts"
