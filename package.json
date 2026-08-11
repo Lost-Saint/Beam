@@ -1,39 +1,39 @@
 {
-    "name": "beam",
-    "version": "1.0.0",
-    "packageManager": "pnpm@11.21.0",
-    "description": "A tiny, TypeScript-first social share helper (fork of sharer.js)",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/index.js"
-            }
-        }
-    },
-    "scripts": {
-        "build": "tsc",
-        "test": "pnpm build",
-        "prepare": "pnpm build"
-    },
-    "files": [
-        "dist"
-    ],
-    "keywords": [
-        "share",
-        "social",
-        "sharer",
-        "typescript",
-        "beam"
-    ],
-    "author": {
-        "name": "taboo"
-    },
-    "license": "GLWTS",
-    "devDependencies": {
-        "@tsconfig/strictest": "^2.0.8",
-        "typescript": "^7.0.2"
+  "name": "beam",
+  "version": "1.0.0",
+  "packageManager": "pnpm@11.21.0",
+  "description": "A tiny, TypeScript-first social share helper (fork of sharer.js)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
     }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "pnpm build",
+    "prepare": "pnpm build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "share",
+    "social",
+    "sharer",
+    "typescript",
+    "beam"
+  ],
+  "author": {
+    "name": "taboo"
+  },
+  "license": "GLWTS",
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.8",
+    "typescript": "^7.0.2"
+  }
 }

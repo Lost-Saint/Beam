@@ -49,7 +49,7 @@ export type SharerName =
   | 'kakaostory'
   | 'yummly';
 
-  interface PopupOptions {
+interface PopupOptions {
   width?: number;
   height?: number;
 }
